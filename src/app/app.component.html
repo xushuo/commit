@@ -1,3 +1,5 @@
 <h1>
-  {{title}}
+  {{title}}  我是父组件
 </h1>
+<input type="text" placeholder="请输入股票代码"  [(ngModel)]="stock" >
+<app-order [stockCode]="stock"  [amount]="100" ></app-order>
