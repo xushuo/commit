@@ -3,3 +3,5 @@
 </h1>
 <input type="text" placeholder="请输入股票代码"  [(ngModel)]="stock" >
 <app-order [stockCode]="stock"  [amount]="100" ></app-order>
+<app-price-quote (lastPriceNAME)="priceQuoteHandler($event)" ></app-price-quote>
+<h2>这是从子组件中获取的最新代码 {{priceQuote.stockCode}} 和那个股票价格{{priceQuote.lastPrice| number:'2.2-2'}}</h2>

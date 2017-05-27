@@ -12,7 +12,11 @@ export class OrderComponent implements OnInit {
   @Input()
   amount: number;
 
-  constructor() { }
+  constructor() {
+    setInterval(()=>{
+      this.stockCode='tt'
+    },3000)
+  }
 
   ngOnInit() {
   }
